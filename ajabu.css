@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {background-color:yellow;
+		margin-left:200px;
+		border-style:solid;
+		padding:5px;
+		}
+
+#caroldiv {border-style:solid;
+		display:inline-block;
+		
+		padding:5px;
+		visibility:visible;
+		}
+		
+		
+#form_containerup { border-style:dashed;
+					display:inline-block;
+					background-color:#FC3;
+				visibility:hidden;  
+					}
+					
+#form_containerin { border-style:dashed;
+					display:inline-block;
+					background-color:#FC3;
+				visibility:hidden;  
+					}
+		
+.form_div { border-style:solid;
+			padding:5px;
+			display:inline-block;
+		}
+
+form{ padding:5px;
+
+		}
+		
+		#dracut {visibility:visible;
+			}
+		
+#links {border-style:solid;
+		position:fixed;
+		top:200PX;
+		left:30PX;
+		height:500px;
+		background-color:#F93;
+		padding:3px;
+		pointer-events: none;
+		
+		}
+		
+	
+		
+		
+.barner {width:100%;
+		border-style:solid;
+
+			}
+
+#feedbackdiv {float:right;
+				border-style:dashed;
+				}
+				
+#attnimage {color:#F00 }
+
+
+

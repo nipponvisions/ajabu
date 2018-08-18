@@ -1,0 +1,25 @@
+-- // By Mathenge Moses 2017
+-- // For demo only
+-- no form validation
+-- no optimization for efficiency
+--no safety from injection
+
+--// email field
+--unique in sequal
+
+
+-- tested on  appache's Xamp
+Server: Localhost via UNIX socket
+Server type: MariaDB
+Server version: 10.1.16-MariaDB - Source distribution
+Protocol version: 10
+User: root@localhost
+Server charset: UTF-8 Unicode (utf8)
+Web server
+
+Apache/2.4.23 (Unix) OpenSSL/1.0.2h PHP/5.6.24 mod_perl/2.0.8-dev Perl/v5.16.3
+Database client version: libmysql - mysqlnd 5.0.11-dev - 20120503 - $Id: 
+PHP extension: mysqli Documentation
+PHP version: 5.6.24
+
+// end
