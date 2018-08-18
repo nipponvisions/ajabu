@@ -19,7 +19,7 @@
 			</p>
 
 			<div id="caroldiv">
-				<img id="carol" width="200px" src="carol.jpg" alt="carol_pic" onMouseDown="delta()">
+				<img id="carol" width="200px" src="images/carol.jpg" alt="carol_pic" onMouseDown="delta()">
 				<h4 id="attnimage"> CLICK ON THE IMAGE TO START </h4>
 			</div>
 
