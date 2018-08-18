@@ -19,7 +19,6 @@ if (!defined('SIGN_IN_form')) {
          	<input id="sign_in" type="submit" value="SIGN IN"  >
          
          </form>  
-    </div>  
-            
-    </div><!--form_containerin -->
+    </div><!--form_div -->             
+</div><!--form_containerin -->
         
