@@ -8,8 +8,8 @@ description:  logging credentials to the mysql database Ajabu
 //data base
 $servername = "localhost";
 $username = "root";
-$password ="root" ;
-$dbname  = "AJABU";
+$password ="cecilia4teddy" ;
+$dbname  = "ajabu";
 
 
 // Create connection

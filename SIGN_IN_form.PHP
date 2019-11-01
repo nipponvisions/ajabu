@@ -4,7 +4,7 @@ if (!defined('SIGN_IN_form')) {
 	exit("this file 'SIGN_IN_form' cant be accessed directly");
 }
 
-define('SIGN_UP_form', True);
+
 
 ?>
 <!-- EXISTING  USER  -->

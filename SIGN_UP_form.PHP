@@ -4,7 +4,6 @@ if (!defined('SIGN_UP_form')) {
 	exit('file "SIGN_UP_FORM " is not  accessible directly');
 }
 
-define('SIGN_IN_form', True);
 
 ?>
 
