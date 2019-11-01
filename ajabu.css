@@ -1,68 +1,96 @@
 @charset "UTF-8";
 /* CSS Document */
 
-body {background-color:yellow;
-		margin-left:200px;
-		border-style:solid;
-		padding:5px;
-		}
+body {
+	background-color:yellow;
+	margin-left:200px;
+	border-style:solid;
+	padding:5px;
+}
 
-#caroldiv {border-style:solid;
-		display:inline-block;
-		
-		padding:5px;
-		visibility:visible;
-		}
-		
-		
-#form_containerup { border-style:dashed;
-					display:inline-block;
-					background-color:#FC3;
-				visibility:hidden;  
-					}
-					
-#form_containerin { border-style:dashed;
-					display:inline-block;
-					background-color:#FC3;
-				visibility:hidden;  
-					}
-		
-.form_div { border-style:solid;
-			padding:5px;
-			display:inline-block;
-		}
+#main{
 
-form{ padding:5px;
+}
+#caroldiv {
+	border-style:solid;
+	display:inline-block;
 
-		}
-		
-		#dracut {visibility:visible;
-			}
-		
-#links {border-style:solid;
-		position:fixed;
-		top:200PX;
-		left:30PX;
-		height:500px;
-		background-color:#F93;
-		padding:3px;
-		pointer-events: none;
-		
-		}
-		
+	padding:5px;
+	visibility:visible;
+}
+
+
+#form_containerup {
+	 border-style:dashed;
+	display:inline-block;
+	background-color:#FC3;
+	visibility:hidden;  
+}
+
+#form_containerin { 
+	border-style:dashed;
+	display:inline-block;
+	background-color:#FC3;
+	visibility:hidden;  
+}
+
+/*.form_div {
+	 border-style:solid;
+	padding:5px;
+	display:inline-block;
+}*/
+
+form{ 
+	padding:5px;
+
+}
+
+ul {
 	
-		
-		
-.barner {width:100%;
-		border-style:solid;
 
-			}
+}
+ul li{
+	list-style: none;
+	margin-top: 3px;
 
-#feedbackdiv {float:right;
-				border-style:dashed;
-				}
-				
-#attnimage {color:#F00 }
+}
+
+#dracut {
+	visibility:visible;
+}
+
+#links {
+	border-style:solid;
+	position:fixed;
+	top:200PX;
+	left:30PX;
+	height:500px;
+	background-color:#F93;
+	padding:3px;
+	/*	pointer-events: none;*/
+
+}
+
+
+.barner {
+	width:100%;
+	border-style:solid;
+
+}
+
+#feedbackdiv {
+	float:right;
+	border-style:dashed;
+}
+
+#attnimage {
+	color:#F00 
+}
+
+footer{
+	background-color: pink;
+	height: 100px;
+}
 
 
 

@@ -1,23 +1,25 @@
 <?php
+// prevent direct acces
 if (!defined('SIGN_UP_form')) {
-	exit('file not accessible directly');
+	exit('file "SIGN_UP_FORM " is not  accessible directly');
 }
+
+define('SIGN_IN_form', True);
 
 ?>
 
 <!-- NEW USER -->
 <!-- session set new user  -->           
 <div id="form_containerup">
-	<div class="form_div">
 
-		<h3> New User SIGN UP </h3>
+	<h3> New User SIGN UP </h3>
 
-		<form id="signup" method="post" action="sign_up.php">
-			Visitor_email : <input type="text" name="new_email" required> <br>
-			Last Name: <input type="text" name="lastname"><br>
-			First Name: <input type="text" name="firstname"><br>
-			<input id="sign_up" type="submit" value="SIGN UP">
-
-		</form>
-	</div><!--form_div -->
+	<form id="signup" method="post" action="sign_up.php">
+		<ul>
+			<li>  Visitor_email : <input type="text" name="new_email" required>  </li>
+			<li> Last Name: <input type="text" name="lastname"></li>
+			<li> First Name: <input type="text" name="firstname"></li>
+			<li> <input id="sign_up" type="submit" value="SIGN UP"></li>
+		</ul>
+	</form>
 </div><!--form_containerup -->

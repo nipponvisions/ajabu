@@ -29,23 +29,11 @@ CREATE TABLE if NOT EXISTS AJABU_VISITORS
 	-- prevent double records
 	ADD UNIQUE (Visitor_email);
 
-
-
-	
 	-- LOAD DATA 
 	-- prevent duplicate data ie emails
 	-- https://lgitsmart.com/2014/10/18/sql-server-tip-preventing-duplicate-records-using-the-unique-constraint/
-
-
-
 
 	INSERT INTO  AJABU_VISITORS ( Visitor_email, LastName, FirstName)
 	VALUES ( 'matengee', 'ajabu', 'joy' )
 
 				;
-		
-
-
-
-
-

@@ -1,8 +1,4 @@
 <?php
-
-session_start();
-define('ajabu_links', True);
-
 	include 'config.php';
 
 
@@ -12,51 +8,75 @@ define('ajabu_links', True);
 		$Lastname =  ( isset($_POST['lastname']) ) ? $_POST['lastname'] : '';
 		$Firstname = ( isset($_POST['firstname']) ) ? $_POST['firstname'] : '';
 
-			$sql = "INSERT INTO AJABU_VISITORS ( Visitor_email, LastName, FirstName) VALUES ('$New_email', '$Lastname', '$Firstname')";
-
-				// if the form was submitted successfully then run the code below
-				if ($conn->query($sql) === TRUE) {
-
-					echo '  New record has been created : '.$New_email;
-
-					} else {
-					// $conn->error. $New_email;
-					echo  ' <div id="feedbackdiv"> Record Exists </div>';
-				}	
-
-				$conn->close();
-
-
-	include 'header.html';
-	include  'ajabu_links.php';
-
-?>
-
-	<!-- activate the links -->
-	<script> 
-        document.getElementById("links").style.pointerEvents = "all";    
-    </script>
 
 
 
-    	<!-- rest of the HTML continues  -->
-		<h1> Ajabu Africa Two </h1>
+		// check if user exists 
+		// check if record exists 
+$email_exists =   $_POST['your_email'];
 
-		<p id=""> 
-			Ajabu the uber driver from Mangu <br>
-			some litelrature here forever. and a history of Mwarimu<br>
-			Ajabu the uber driver from Mangu <br>
-			some litelrature here forever. and a history of Mwarimu<br>
-			Ajabu the uber driver from Mangu <br>
-			some litelrature here forever. and a history of Mwarimu<br>
-		</p>
+//check db for record exist.
+$sql = "SELECT Visitor_email FROM AJABU_VISITORS WHERE Visitor_email = '$email_exists'";
 
-		<div id="caroldiv">
-			<img id="carol" width="200px" src="carol.jpg" alt="carol_pic" onMouseDown="delta()">
-		</div>
+$result = $conn ->query($sql);
 
-	</body>
-</html>
+$row = mysqli_fetch_assoc($result);
+
+
+var_dump($row);
 
 
 
+if ($row ==!NULL){
+	//if record exists
+
+	echo 'record exists';
+	//header("Location:welcome.php"); /* Redirect browser */
+	//exit();
+
+	
+
+} else{
+	// Stay on same page but java pulls up the signup form
+	echo '  No records were found Please Sign UP : '.$email_exists;
+}		
+// free results				
+mysqli_free_result($result);
+$conn->close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			// $sql = "INSERT INTO AJABU_VISITORS ( Visitor_email, LastName, FirstName) VALUES ('$New_email', '$Lastname', '$Firstname')";
+
+				
+			// 	// 
+			// 	// check if insertio was succes 
+			// 	if (!$conn->query($sql) === TRUE) {
+
+			// 		echo 'error <br>'.mysqli_error($conn);
+
+			// 		} else {
+
+			// 		// new record created  or 
+			// 		// if record exists  
+			// 		header("Location:welcome.php"); /* Redirect browser */
+			// 	}	
+			// 	$conn->close();
