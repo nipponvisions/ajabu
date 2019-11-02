@@ -1,82 +1,50 @@
 <?php
-	include 'config.php';
+//https://www.w3schools.com/php/php_mysql_insert.asp
+include 'config.php';
 
+// FOR NEW USERS 
+//get values from signup form
+$New_email = ( isset($_POST['new_email']) ) ? $_POST['new_email'] : '';
+$Lastname =  ( isset($_POST['lastname']) ) ? $_POST['lastname'] : '';
+$Firstname = ( isset($_POST['firstname']) ) ? $_POST['firstname'] : '';
 
-		// FOR NEW USERs -  ADD RECORD 
-		// SQL DETAILS  GOES HERE
-		$New_email    = ( isset($_POST['new_email']) ) ? $_POST['new_email'] : '';
-		$Lastname =  ( isset($_POST['lastname']) ) ? $_POST['lastname'] : '';
-		$Firstname = ( isset($_POST['firstname']) ) ? $_POST['firstname'] : '';
+// 1ST CHECK IF EMAIL EXISTS
+$sql ="	SELECT `Visitor_email` FROM `ajabu_visitors` WHERE Visitor_email = '$New_email'";
 
+// check sql error
+if ($conn ->query($sql) == !TRUE) {
+	# code...
+	echo "Error: <br>" . $conn->error;
+	// prevent further execution
+	exit();
+}
 
-
-
-		// check if user exists 
-		// check if record exists 
-$email_exists =   $_POST['your_email'];
-
-//check db for record exist.
-$sql = "SELECT Visitor_email FROM AJABU_VISITORS WHERE Visitor_email = '$email_exists'";
-
+// 
 $result = $conn ->query($sql);
 
-$row = mysqli_fetch_assoc($result);
+$email_exists = mysqli_fetch_assoc($result);
+ ?><pre><?php  var_dump($email_exists);  ?></pre> <?php 
 
+if($email_exists == NULL){ 	/* null means email doesnt exist */
 
-var_dump($row);
+	//  insert the data into the dB
+	$sql = "INSERT INTO `ajabu_visitors`(`visitor_email`, `LastName`, `FirstName`) VALUES
+		('$New_email', '$Lastname', '$Firstname' )";
 
+	// check sql errors
+	if($conn->query($sql)===!TRUE){
+		echo "Error: <br>"  . $conn->error;
+		exit();
+	}
+	else{
+		echo "New record created successfully".$New_email;
+	}
 
+}
+else{
 
-if ($row ==!NULL){
-	//if record exists
+	echo "RECORD EXISTS ".$New_email;
+}
 
-	echo 'record exists';
-	//header("Location:welcome.php"); /* Redirect browser */
-	//exit();
-
-	
-
-} else{
-	// Stay on same page but java pulls up the signup form
-	echo '  No records were found Please Sign UP : '.$email_exists;
-}		
-// free results				
-mysqli_free_result($result);
+//end connection
 $conn->close();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			// $sql = "INSERT INTO AJABU_VISITORS ( Visitor_email, LastName, FirstName) VALUES ('$New_email', '$Lastname', '$Firstname')";
-
-				
-			// 	// 
-			// 	// check if insertio was succes 
-			// 	if (!$conn->query($sql) === TRUE) {
-
-			// 		echo 'error <br>'.mysqli_error($conn);
-
-			// 		} else {
-
-			// 		// new record created  or 
-			// 		// if record exists  
-			// 		header("Location:welcome.php"); /* Redirect browser */
-			// 	}	
-			// 	$conn->close();

@@ -1,11 +1,12 @@
 <?php
 define('SIGN_UP_form', TRUE);
-define('ajabu_links', true);
+define('ajabu_links', TRUE);
 
 include 'config.php';
 
 //EXISTING USER
-// check if record exists 
+// 
+//get data from form
 $email_exists =   $_POST['your_email'];
 
 //check db for record exist.
@@ -19,12 +20,19 @@ $row = mysqli_fetch_assoc($result);
 
 if ($row ==!NULL){
 	//if record exists
-	header('Location:http://localhost/site/AJABU/welcome.php');
-	exit();
+
+	var_dump($row);
+
+
+	//header('Location:http://localhost/site/AJABU/welcome.php');
+	//exit();
 
 } else{
 	// Stay on same page but java pulls up the signup form
 	echo '  No records were found Please Sign UP : '.$email_exists;
+
+	 include 'SIGN_UP_form.php';
+
 }		
 // free results				
 mysqli_free_result($result);
@@ -40,7 +48,7 @@ $conn->close();
 		<h1> This is sign_in.php  </h1>
 
 		<?php
-		include 'SIGN_UP_form.php';
+		// include 'SIGN_UP_form.php';
 
 
 		?>

@@ -14,7 +14,7 @@ if (!defined('SIGN_IN_form')) {
 	
 	<h3> Member  SIGN IN </h3>
         
-	<form id="signin" method="post" action="sign_in.php">
+	<form id="signin" method="post" action="sign_up.php">
 		<ul>
 			<li> Your Email: <input type="text" name="your_email" required>  </li>  
         	<li>  Last Name: <input type="text" name="lastname"></li> 
