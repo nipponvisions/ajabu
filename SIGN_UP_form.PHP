@@ -16,8 +16,8 @@ if (!defined('SIGN_UP_form')) {
 	<form id="signup" method="post" action="sign_up.php">
 		<ul>
 			<li>  Visitor_email : <input type="text" name="new_email" required>  </li>
-			<li> Last Name: <input type="text" name="lastname"></li>
-			<li> First Name: <input type="text" name="firstname"></li>
+			<li> Last Name: <input type="text" name="lastname" ></li>
+			<li> First Name: <input type="text" name="firstname" ></li>
 			<li> <input id="sign_up" type="submit" value="SIGN UP"></li>
 		</ul>
 	</form>
